@@ -1,0 +1,11 @@
+\section{Introduction}
+
+Algorithm analysis typically relies on computational complexity \cite{complexity}. And even when sometimes it is not possible to diminish it, processor companies try to offer new products providing higher performances.  Thus, \textit{multi-core and many-core} processors allow to run parallel applications on desktop computers, but indirectly imply the need of learning new parallel programing paradigms and libraries.
+
+Despite the advantages provided by these models, an important feature is frequently forgotten:  power consumption, which largely correlates with performances provided by new processors.  Thus, although new hardware capabilities allows to significantly reduce computing time, the cost of electricity required to run the algorithms is not always taken into account.
+
+The term \textit{Green computing} was born in the last decade to refer to problems associated to power consumption in computing environments, particularly in large data centers \cite{green-computing}.  But this energy-aware point of view is equally appliable to desktop computers and any kind of algorithms that may be run.
+
+When dealing with evolutionary algorithms (EAs), big efforst have been applied to improve performances while applying parallel and distributed systems \cite{paba}.  Improvements have tried to analyse global quality of solutions when compared with time required to find them.  But similarly as the traveller considering not only speed but also price when selecting means of transport, we should also consider energy consumption when running an algorithm, and not just the time to solution.
+
+To the best of our knowledge, the influence of this important parameter has not been analysed yet in the context of EAs, although its importance has already been recognised \cite{ephemeral}.  This is the main goal of this work, to make a preliminary analysis of the impact of power consumption when running EAs on different hardawre architectures, so that we may in the future be aware of the importance, and even design energy-aware EAs.

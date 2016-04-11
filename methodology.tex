@@ -1,10 +1,11 @@
 \section{Methodology}
 
-This preliminary study tries to measure power consumption for a couple of evolutionary algorithms, Genetic Algorithms and Genetic Programming.
+This preliminary study tries to measure power consumption for a couple of EAs, Genetic Algorithms (GA) and Genetic Programming (GP).
 
 Given the stochastic nature of this kind of algorithms, we firstly decided to run each of the experiment 30 times so that the average can be computed as an estimation of the algorithm behavior.  On the other hand, and given that different hardware platforms will be tested, we decided to choose 30 random seeds so that all of the runs are exactly the same in every platform, when considering high level operations defined in the high level programming language.
 
-On the other hand, and given the influence of computing time in the total ammount of energy consumed by the algorithm, we configured the main loop of the algorithm to end when a required level of solution quality is reached. We are thus mainly interested in the average computing time for the 30 runs, together with the energy consumed along that time.  The only differences that may arise are due to hardware differences:  instruction set architecture, processor speed, etc;  features that are not in the focus of this work.  Nevertheless, theses differences may influence future decission on the preferred hardware for the algorithms.  
+On the other hand, and given the influence of computing time in the total ammount of energy consumed by the algorithm, we configured the main loop of the algorithm to finish when a required level of solution quality is reached. We are thus mainly interested in the average computing time for the 30 runs, together with the energy consumed along that time.  The only differences that may arise are due to hardware differences:  instruction set architecture, processor speed, etc;  % also the operating system architecture affects  -  pedro
+features that are not in the focus of this work.  Nevertheless, theses differences may influence future decission on the preferred hardware for the algorithms.  
 
 We must also mention the interest in studying some of the main parameters of the algorithm:  they have a well-known impact on the time to find solutions, and may thus also directly, or indirectly influence the energy consumed to reach that solution.  In this preliminary study we have focused on population size and have tested several values for each of the algorithms tested.
 
@@ -23,11 +24,19 @@ Laptop & Intel(R) Core(TM) i5-2450M (2.50GHz)&4&8GB\\
 Xilinx SoC & ZYNQ-7000 ZC702 (50Mhz) & & \\
 Smartphone & Qualcomm & & \\
 Samsung Galaxy Note 3 & Snapdragon 800 (2.3Ghz) & 4 & 3Gb \\
+% this table should be updated with the information about the Android tablet:
+%   SAMSUNG GALAXY TAB-3 (SM-T311)
+%   Android 4.4.2
+%   Kernel 3.0.31
+%   CPU 1.5 GHz dual core
+%   Samsung Exynos 4212 Dual SoC processor
+%   1.5GB RAM
 \hline
 \end{tabular}
 \end{table}
 
-Given differences among hardware devices, we have employed different means for measuring energy consumed by each of the algorithms.  Regarding the desktop PC and raspberry pi, we have employed a voltimeter for meassuring total consumption of the device in two different scenaries:  (i) when the algorithm is not running and (ii) when the algorithm is running.  Given that \textit{current intensity} values remain constant in every case, we can obtain the measure for the algorithm by simply substracting both values for a given device.  This value together with electric tension allows us to compute watts consumed.
+Given differences among hardware devices, we have employed different means  % means???  
+for measuring energy consumed by each of the algorithms.  Regarding the desktop PC and raspberry pi, we have employed a voltimeter for meassuring total consumption of the device in two different scenaries:  (i) when the algorithm is not running and (ii) when the algorithm is running.  Given that \textit{current intensity} values remain constant in every case, we can obtain the measure for the algorithm by simply substracting both values for a given device.  This value together with electric tension allows us to compute watts consumed.
 
 When android devices are considered, such as smartphones or tablets, we have employed  \textit{PowerTutor} \cite{powertutor},\cite{powertutor2}. This app allows to check energy consumption for every process run.
 
@@ -87,8 +96,10 @@ When the FPGA SoC ZC702 has been employed, together with the IP module required 
 \label{Table:par_genetico}
 \begin{tabular}{cc}
 \hline
-Max number of generation & $10000$ \\
-Population sizes & $50$,$100$,$500$,$1000$ \\
+%Max number of generation & $10000$ \\
+Max number of generation & $500$ \\
+%Population sizes & $50$,$100$,$500$,$1000$ \\
+Population sizes & $100$,$200$,$400$,$500$,$1000$ \\
 Crossover probability & $0.8$ \\ 
 Mutation probability & $0.15$ \\ 
 \hline

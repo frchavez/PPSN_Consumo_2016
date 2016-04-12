@@ -3,6 +3,10 @@
 *.aux
 *.log
 *.out
+*.bbl
+*.blg
+
 
 #backups
 *~
+*backup

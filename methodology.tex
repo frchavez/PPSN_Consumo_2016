@@ -1,11 +1,12 @@
 \section{Methodology}
+\label{methodology}
 
 This preliminary study tries to measure power consumption for a couple
 of EAs, Genetic Algorithms (GA) and Genetic Programming (GP). 
 
 Given the stochastic nature of this kind of algorithms, we firstly decided to run each of the experiment 30 times so that the average can be computed as an estimation of the algorithm behavior.  On the other hand, and given that different hardware platforms will be tested, we decided to choose 30 random seeds so that all of the runs are exactly the same in every platform, when considering high level operations defined in the high level programming language.
 
-On the other hand, and given the influence of computing time in the total ammount of energy consumed by the algorithm, we configured the main loop of the algorithm to finish when a required level of solution quality is reached. We are thus mainly interested in the average computing time for the 30 runs, together with the energy consumed along that time.  The only differences that may arise are due to hardware differences:  instruction set architecture, processor speed, etc;  % also the operating system architecture affects  -  pedro
+On the other hand, and given the influence of computing time in the total ammount of energy consumed by the algorithm, we configured the main loop of the algorithm to finish when a required level of solution quality is reached. We are thus mainly interested in the average computing time for the 30 runs, together with the energy consumed along that time.  The only differences that may arise are due to hardware differences:  instruction set architecture, processor speed, operating system, etc;  % also the operating system architecture affects  -  pedro
 features that are not in the focus of this work.  Nevertheless, theses differences may influence future decission on the preferred hardware for the algorithms.  
 
 We must also mention the interest in studying some of the main parameters of the algorithm:  they have a well-known impact on the time to find solutions, and may thus also directly, or indirectly influence the energy consumed to reach that solution.  In this preliminary study we have focused on population size and have tested several values for each of the algorithms tested.
@@ -48,9 +49,7 @@ With that information, we can compute kilowats-hour (kwh).  This will be our mai
 
 Regarding the problems selected for the experimental stage, we have selected one of the test problems provided with each of the software tools selected:  the multiplexer problem provided with lilgp on the one hand, and an scalar function -check ~\ref{eq:fitness}-  with five variables to be optimized. 
 
-%Por otro lado, el problema a resolver es la búsqueda del valor máximo en una función escalar $\textbf{F}$ definida por cinco variables, siguiendo las directrices presentadas en~\cite{michalewicz}. Cada uno de estos valores, proporcionados como parámetro, deben estar comprendidos entre un valor mínimo y uno máximo. El objetivo es encontrar los valores óptimos de las cinco variables para que la función $F$ alcance un valor máximo dado. La función de fitness se especifica en la Ecuación~\ref{eq:fitness}.
-
-Main parameters for the GA are described in Table~\ref{Table:par_genetico}.  The upper limit for generation number is  $10000$, stopping the run when the best individuals is ($0,999\%$) near the optimal solution. Four population sizes have been tested.
+Main parameters for both the GA and the GP problems are described in Table~\ref{Table:par_ga} and Table~\ref{Table:par_gp}.  The upper limit for generation number is  $10000$, stopping the run when the best individuals is ($0,999\%$) near the optimal solution. Four population sizes have been tested.
 
 When the Xilinx FPGA has been tested using the evaluation kit described in Table~\ref{Table:devices} to compile the GA algorithm. Given the way the algorithms are converted into hardware components, the stop criteria cannot be applied, and instead, the average number of generations computed in other hardware platforms has been employed as the upper limit for the run, given that the same random seeds will produce the same high level operations for the algorithm.  The total ammount of generation for population sizes of 50, 100, 500 and 1000 individulas are  6505, 5859, 2732 y 1684, respectively.
 
@@ -94,14 +93,32 @@ When the FPGA SoC ZC702 has been employed, together with the IP module required 
 \begin{table}
 \renewcommand{\arraystretch}{1.3}
 \centering
-\caption{Main GA Parameters.}
-\label{Table:par_genetico}
+\caption{Main GP Parameters for multiplexer 6.}
+\label{Table:par_gp}
 \begin{tabular}{cc}
 \hline
 %Max number of generation & $10000$ \\
-Max number of generation & $500$ \\
+Max number of generations & $500$ \\
 %Population sizes & $50$,$100$,$500$,$1000$ \\
 Population sizes & $100$,$200$,$400$,$500$,$1000$ \\
+Crossover probability & $0.8$ \\ 
+Mutation probability & $0.15$ \\ 
+%Other parameters &  default values for the problem in \cite{lilgp} \\
+\hline
+\end{tabular}
+\end{table}
+
+
+\begin{table}
+\renewcommand{\arraystretch}{1.3}
+\centering
+\tiny
+\caption{Main GA parameters.}
+\label{Table:par_ga}
+\begin{tabular}{cc}
+\hline
+Max number of generations & $10000$ \\
+Population sizes & $50$,$100$,$500$,$1000$ \\
 Crossover probability & $0.8$ \\ 
 Mutation probability & $0.15$ \\ 
 \hline

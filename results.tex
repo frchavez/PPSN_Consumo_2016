@@ -3,6 +3,8 @@
 
 As described in the previous section, we show in table \ref{Table:result_todos} power consumption and computer time for each of the devices and algorithm tested, using different population size for each of the experiments.
 
+We may notice first large differences in energy required to run the algorithms, both GA and GP, when different hardware devices are employed.  Thus, raspberry pi and tablet devices are the ones requiring smaller ammounts of energy per unit of time (power).  Nevertheless, when we take into account not only power, but also total time to complete an experiment, and given that laptops and blade systems provide better computing capabilities, things could be different.
+
 
  %(~\ref{fig:consumo}). 
 
@@ -24,15 +26,16 @@ As described in the previous section, we show in table \ref{Table:result_todos} 
 
 
 %Table~\ref{Table:result_todos} shows results obtained with a population size of 100, 200, 400, 500 and y 1000 individuals, respectively. 
+
 \begin{small}
- 
+
 \begin{table}[!ht]
 \renewcommand{\arraystretch}{1.3}
 \centering
-\caption{Experimental results}
+\caption{Experimental results - GP - Multiplexer 6}
 \label{Table:result_todos}
 \begin{tabular}{ccccc} \hline
-Device & Consumption (W) & Time (sec.) & Energy (Joules) & Consumption (Kwh) \\ \hline
+Device & Power (W) & Time (sec.) & Energy (Joules) & (Kwh) \\ \hline
 \multicolumn{4}{c}{\textbf{Population size = 100}}\\ %\hline
 Raspberry Pi & 0.5 & 233.14 &116.57 & 3.24*$10^{-5}$ \\
 Tablet & 0.63 & 132.75 & 83,3&2.31*$10^{-5}$ \\
@@ -68,51 +71,40 @@ Blade &	17.1&1305.84& 22329.86&6.20*$10^{-3}$ \\ \hline
 \end{table} 
 \end{small}
 
-%\begin{table}
-%\renewcommand{\arraystretch}{1.3}
-%\centering
-%\caption{Resultados experimentales con tamaño de poblacion = 100.}
-%\label{Table:result_100}
-%\begin{tabular}{cccc}
-%\hline
-% Dispositivo & Consumo (W) & Tiempo (seg.) & Consumo (Kwh) \\ \hline
-% Raspberry Pi & 0,32 & 109,89 &  $0,977*10^{-5}$ \\
-% Laptop & 15,76 & 12,11 & $5,3*10^{-5}$ \\
-% Smartphone & 0,26 & 65,75 & $0,48*10^{-5}$ \\
-% FPGA & 1,990 & 306,12 & $56,405*10^{-5}$ \\ 
-% \hline
-%\end{tabular}
-%\end{table} 
 
+Table~\ref{Table:result_ga} shows GA results when using population sizes: 50, 100, 500 y 1000.
 
-%\begin{table}
-%\renewcommand{\arraystretch}{1.3}
-%\centering
-%\caption{Resultados experimentales con tamaño de poblacion = 500.}
-%\label{Table:result_500}
-%\begin{tabular}{cccc}
-%\hline
-% Dispositivo & Consumo (W) & Tiempo (seg.) & Consumo (Kwh) \\ \hline
-% Raspberry Pi & 0,38 & 996,61 &  $10,520*10^{-5}$ \\
-% Laptop & 18,6 & 87,16 & $45,034*10^{-5}$ \\
-% Smartphone & 0,18 & 802,26 & $4,185*10^{-5}$ \\
-%FPGA & 2,050 & & \\ 
-%\end{tabular}
-%\end{table}  
+\vspace{-0.5cm}
+\begin{table}[!ht]
+\renewcommand{\arraystretch}{1.3}
+\centering
+%\tiny
+\caption{Experimental Results - GA}
+\label{Table:result_ga}
+\begin{tabular}{cccc} \hline
+Device & Power (W) & Time (seg.) & Energy (Kwh) \\ \hline
+\multicolumn{4}{c}{\textbf{Population size = 50}}\\ %\hline
+ Raspberry Pi & 0,32 & 41,66 &  $0,370*10^{-5}$ \\
+ Laptop & 12,76 & 5,1 & $1,81*10^{-5}$ \\
+ Smartphone & 0,27 & 35,48 & $0,272*10^{-5}$ \\
+ FPGA & 1,982 & 60,523 & $3,332*10^{-5}$\\  \hline
+\multicolumn{4}{c}{\textbf{Population size = 100}}\\ %\hline
+ Raspberry Pi & 0,32 & 109,89 &  $0,977*10^{-5}$ \\
+ Laptop & 15,76 & 12,11 & $5,3*10^{-5}$ \\
+ Smartphone & 0,26 & 65,75 & $0,48*10^{-5}$ \\
+ FPGA & 1,990 & 153,06 & $8,4608*10^{-5}$ \\ \hline
+\multicolumn{4}{c}{\textbf{Population size = 500}}\\ %\hline
+ Raspberry Pi & 0,38 & 996,61 &  $10,520*10^{-5}$ \\
+ Laptop & 18,6 & 87,16 & $45,034*10^{-5}$ \\
+ Smartphone & 0,18 & 802,26 & $4,185*10^{-5}$ \\
+ FPGA & 2,050 & 964,27& $54,909*10^{-5}$\\ \hline
+\multicolumn{4}{c}{\textbf{Population size = 1000}}\\ %\hline
+ Raspberry Pi & 0,5 & 2572,8 &  $35,733*10^{-5}$ \\
+ Laptop & 19,49 & 215,33 & $116,475*10^{-5}$ \\
+ Smartphone & 0,22 & 2219,80 & $13,807*10^{-5}$ \\
+ FPGA & 2,172 &2429,97 & $146,60*10^{-5}$\\ \hline
+\end{tabular}
+\end{table} 
+%\vspace{-0.5cm}
 
-
-%\begin{table}
-%\renewcommand{\arraystretch}{1.3}
-%\centering
-%\caption{Resultados experimentales con tamaño de poblacion = 1000.}
-%\label{Table:result_1000}
-%\begin{tabular}{cccc}
-%\hline
-% Dispositivo & Consumo (W) & Tiempo (seg.) & Consumo (Kwh) \\ \hline
-% Raspberry Pi & 0,5 & 2572,8 &  $35,733*10^{-5}$ \\
-% Laptop & 19,49 & 215,33 & $116,475*10^{-5}$ \\
-% Smartphone & 0,22 & 2219,80 & $13,807*10^{-5}$ \\
-%FPGA & 2,172 & & \\ 
-%\end{tabular}
-%\end{table}  
 

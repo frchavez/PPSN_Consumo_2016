@@ -13,8 +13,7 @@ Finally, we can also analyse the influence of population sizes in both the time 
 
 
 \begin{table}[!t]
-\caption{Time (in seconds) for an EA run on each system depending on the population size. The numbers denote the mean and the standard error of the mean.}
-\label{Table:resultados}
+\caption{Time (in seconds) for an EA run on each system depending on the population size. The numbers denote the mean and the standard error of the mean for the 30 runs performed.}
 \begin{tabular}{lrcrcrcrcrc}
 &&\multicolumn{9}{c}{population size}\\
 \cline{3-11}
@@ -36,7 +35,13 @@ Blade	&& 2.59 $\pm$ 0.53	&& 6.88 $\pm$ 0.91	&& 16.78 $\pm$ 1.59	&& 22.28 $\pm$ 2
 \end{figure}
 
 
-
+\begin{figure}[!t]
+\subfloat[]{\hspace{-1.1cm}\includegraphics[width=.585\textwidth]{fitness.eps}}~~
+\subfloat[]{\includegraphics[width=.48\textwidth]{fitnessenergy.eps}}
+\caption{(a) Distribution of fitness values attained for each population size (platform independent). 
+(b) Tradeoff between fitness attained and energy consumption. The data points mark mean values and the error bars indicate the standard error of the mean. A fit to a power-law $E\propto f^k$ is also included (in the case of the Blade system, we have omitted the last point from the fit since it is clearly an outlier). 
+\label{fig:fitnessenergy}}
+\end{figure}
 
 %We may notice first large differences in energy required to run the GP algorithm, when different hardware devices are employed.  Thus, raspberry pi and tablet devices are the ones requiring smaller ammounts of energy per unit of time (power).  Nevertheless, when we take into account not only power, but also total time to complete an experiment, and given that laptops and blade systems provide better computing capabilities, things could be different.  N
 

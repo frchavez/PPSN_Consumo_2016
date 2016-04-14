@@ -73,6 +73,7 @@ Blade		& Virtual Machine (on IBM 8CPUs x 2GHz, \\
 
 Given differences among hardware devices, we have employed different ways  % means???  
 for measuring energy consumed by each of the algorithms.  
+
 \subsubsection*{Laptop and Raspberry Pi.}
 Regarding the desktop PC and raspberry pi, we have employed a voltimeter for measuring total consumption of the device in two different scenarios:  (i) when the algorithm is not running and (ii) when the algorithm is running.  Given that \textit{current intensity} values remain constant in every case, we can obtain the measure for the algorithm by simply substracting both values for a given device.  This value together with electric tension allows us to compute watts consumed.
 
@@ -96,6 +97,8 @@ compute the excess power consumption due to the EA (and hence accounting for
 eventual hysteretic phenomena).
 
 \subsubsection*{Blade.}
+
+Ecosystems such as clusters are very used to compute big data sets. This kind of systems allow us to optimize the resources like ethernet, stored, power supply, etc. In this work we have studied, for the problem described, if it is possible to optimize the energy consumption. We have used a virtualization ecosystem, where the problem has been executed in a virtual machine. The ecosystem used VMWare Esxi 5.0, where there is a virtual machine with the features described in Table \ref{Table:devices}. The hypervisor system allows us to control both the energy consumed by the Blade and by the virtual machine in question. With these Blade features we can study the power measurements in the different problem configurations.
 
 %\subsubsection*{FPGA.}
 

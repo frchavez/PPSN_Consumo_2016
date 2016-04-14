@@ -3,19 +3,19 @@
 
 As described in the previous section, we show in table \ref{Table:result_todos} power consumption and computer time for each of the devices and algorithm tested, using different population size for each of the experiments.  
 
-Different features can be analysed:  (i) device behavior when considering energy consumed by the algorithm per unit of time . (ii) total energy required to find a solution (iii) how poulation size influences the energy needs when looking for a solution.
+Different features can be analysed:  (i) device behavior when considering energy consumed by the algorithm per unit of time; (ii) total energy required to find a solution and (iii) the way poulation size influences the energy needs when looking for a solution.
 
-If we focus first on the energy required by lilgp to run in every device, we notice that raspberry pi and tablet devices are the least demanding ones, requiring 20 times less enenergy to run the same algorithm when compared with more standar computers:  Mac, Laptop and blade system.
+If we focus first on the energy required by lilgp to run in every device, we notice that raspberry pi and handheld devices are the least demanding ones, requiring 20 times less enenergy to run the same algorithm when compared with more standar computers:  Mac, Laptop and blade system.
 
-Secondly, when considering the total enery required to reach the solution for the problem, the Tablet device running Android is the device that provide the \textit{cheapest} solution, according to energy consummed, while blade and laptops are the more \textit{expensive} ones in every case.  Yet, if we only focus on computing time, then, the opposite is the case, and Mac, Laptop and Blade would be the preferred ones.  
+Secondly, when considering the total enery required to reach the solution for the problem, the Tablet device running Android is the device that provide the \textit{cheapest} solution, according to energy consummed, while blade and laptops are the more \textit{expensive} ones in every case.  Yet, if we only focus on computing time, then, the opposite is the case, and Mac, Laptop and Blade would be the preferred ones.  But given that we are looking for energy efficient ways of finding solutions by means of EAs, then raspberry pi and tablet are preferred.
 
-Finally, if we analyse the influence of population sizes in both the time to reach solutions and also the energy consumed to reach that solutions, we see that it's preferred to use the 500 individuals insteado of 1000.  As already described by Koza, 500 is an optimal size for the problem, and adding more individuals don't benefit the search process, quite the opposite, adds a burden that implies larger computing time.  Nevertheless, what is of interest in this preliminar analysis, is the behavior of every device when this parameter is changed in this sequential version of the algorithm:  we have recorded a change in power consumption for the laptop, mac and blade system, while no change is found for raspberry and quite small changes for the tablet;  and this again benefits the lattests.
-
-
+Finally, we can also analyse the influence of population sizes in both the time to reach solutions.  In the experimental stage, the runs with smaller population sizes typically reach 500 generations, given that they cannot find the solution with that small number of individuals.  So we will focus on the runs with larger population sizes.  Thus, the energy consumed to reach that solutions, we see that it's better to use the 500 individuals instead of 1000.  As already described by Koza, 500 is an optimal size for the problem, and adding more individuals don't benefit the search process, quite the opposite, adds a burden that implies larger computing time.  Nevertheless, what is of interest in this preliminar analysis, is the behavior of every device when this parameter is changed in this sequential version of the algorithm:  we have recorded a change in power consumption for the laptop, mac and blade system, while no change is found for raspberry and quite small changes for the tablet;  and this again benefits the lattests.  
 
 
 
-We may notice first large differences in energy required to run the GP algorithm, when different hardware devices are employed.  Thus, raspberry pi and tablet devices are the ones requiring smaller ammounts of energy per unit of time (power).  Nevertheless, when we take into account not only power, but also total time to complete an experiment, and given that laptops and blade systems provide better computing capabilities, things could be different.  N
+
+
+%We may notice first large differences in energy required to run the GP algorithm, when different hardware devices are employed.  Thus, raspberry pi and tablet devices are the ones requiring smaller ammounts of energy per unit of time (power).  Nevertheless, when we take into account not only power, but also total time to complete an experiment, and given that laptops and blade systems provide better computing capabilities, things could be different.  N
 
 
  %(~\ref{fig:consumo}). 

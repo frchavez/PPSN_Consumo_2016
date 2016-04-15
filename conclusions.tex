@@ -1,3 +1,8 @@
 \section{Conclusions}
 \label{conclusions}
 
+We have presented a priliminary study on the power consumption behavior of a well known Ea: the Genetic Programming algorithm.  We have analysed the behavior of a benchmark GP problem, the multiplexer-6, and have run it using \textit{lilgp} on different hardware devices running a number of operating systems, from blade systems using different linux distributions to tablet devices running android.
+
+One of the first thing we have learned, is that algthough devices with better processors can run the algorithm more quickly, they spent larger amounts of energy, and the total energy required to find a solution is thus also larger.  This means that although the standard preference for beter hardware platforms and processors allows to find solutions more quickly, it incurrs in waste of energy that should be considered:  it is much more energy efficient to run the algorithm on a raspberry pi or a tablet device.
+
+Secondly, we have seen the influence that some of the main paremeters of the algorithm may have on the power consummed:  changing population sizes authomatically produce a change the energy required to reach solutions, and this is a hint on future analysis.  We should carefully consider how each of the parameters of the algorithm may also influence the ammount of energy consumed when looking for solutions.

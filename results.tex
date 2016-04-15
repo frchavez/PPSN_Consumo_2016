@@ -1,11 +1,11 @@
 \section{Obtained Results}
 \label{results}
 
-As described in the previous section, power consumption and computer time for each of the devices and algorithm tested, using different population size for each of the experiments, are reported in Table \ref{Table:resultados} and Figure \ref{fig:powerenergy}.  
+As described in the previous section, power consumption and computer time for each of the devices and algorithm tested, using different population size for each of the experiments, are reported in Table~\ref{T:r_obtained} and Figure~\ref{fig:powerenergy}.  
 
 Different features can be analyzed:  (i) device behavior when considering energy consumed by the algorithm per unit of time; (ii) total energy required to find a solution and (iii) the way population size influences the energy needs when looking for a solution.
 
-If we focus first on the energy required by lilgp to be run in every device, we notice that raspberry pi and handheld devices are the least demanding ones, requiring 20 times less energy to run the same algorithm when compared with more standard computers:  Mac, Laptop and blade system.
+If we focus first on the energy required by lilgp to be run in every device, we notice that raspberry pi and handled devices are the least demanding ones, requiring 20 times less energy to run the same algorithm when compared with more standard computers:  Mac, Laptop and blade system.
 
 Secondly, when considering the total energy required to reach the solution for the problem, the Tablet device running Android is the device that provide the \textit{cheapest} solution, according to energy consumed, while blade and laptops are the more \textit{expensive} ones in every case.  Yet, if we only focus on computing time, then, the opposite is the case, and Mac, Laptop and Blade would be the preferred ones.  But given that we are looking for energy efficient ways of finding solutions by means of EAs, then raspberry pi and tablet are preferred.
 
@@ -14,6 +14,7 @@ Finally, we can also analyse the influence of population sizes in both the time 
 
 \begin{table}[!t]
 \caption{Time (in seconds) for an EA run on each system depending on the population size. The numbers denote the mean and the standard error of the mean for the 30 runs performed.}
+\label{T:r_obtained}
 \begin{tabular}{lrcrcrcrcrc}
 &&\multicolumn{9}{c}{population size}\\
 \cline{3-11}

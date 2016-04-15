@@ -1,18 +1,7 @@
-\section{Obtained Results}
+\section{Results}
 \label{results}
 
-As described in the previous section, power consumption and computer time for each of the devices and algorithm tested, using different population size for each of the experiments, are reported in Table~\ref{T:r_obtained} and Figure~\ref{fig:powerenergy}.  The first thing that we may notice, is the differences in computing time among devices analysed, which corresponds with expectations:  small devices requires quite longer time to reach solutions, and this is typically the reason why raspberry pi and tablets are not frequently use as the hardware platform to run EAs, although they are useful when non-standard distributed models are analysed (such as pool-based models, \cite{pool}).
 
-Nevertheless, we are considering a different point of view, and won't only focus on computing time.  Different features can thus be analyzed:  (i) device behavior when considering energy consumed by the algorithm per unit of time; (ii) total energy required to find a solution and (iii) the way population size influences the energy needs when looking for a solution.
-
-If we focus first on the energy required by lilgp to be run in every device (see \ref{fig:powerenergy}), we notice that raspberry pi and handheld devices are the least demanding ones, requiring an order of magnitude less energy to run the same algorithm when compared with more standard computers:  Mac, Laptop and blade system.
-
-Secondly, when considering the total energy required to reach the solution for the problem, the Tablet device running Android is the device that provide the \textit{cheapest} solution, according to energy consumed, while blade and laptops are the more \textit{expensive} ones in every case.  Yet, if we only focus on computing time, then, the opposite is the case, and Mac, Laptop and Blade would be the preferred ones.  But given that we are looking for energy efficient ways of finding solutions by means of EAs, then raspberry pi and tablet are preferred.
-
-Finally, we can also analyse the influence of population sizes in both the time to reach solutions and the energy required for that.  In the experimental stage, the runs with smaller population sizes typically reach 500 generations -maximum allowed, given that they cannot find the solution with that small number of individuals.  Therefore, we will focus on the runs with larger population sizes and  the energy consumed to reach that solutions.  We see in figure \ref{fig:powerenergy} that it's better to use the 500 individuals instead of 1000 when considering energy, similarly as already described by Koza when considering time:  500 is an optimal size for the problem, and adding more individuals is a burden that implies larger computing time.  Nevertheless, what is of interest in this preliminary analysis, is the behavior of every device when this parameter is changed in this sequential version of the algorithm:  we have recorded a change in power consumption for the laptop, mac and blade system, while no change is found for raspberry and quite small changes for the tablet;  and this again benefits the latests (see figure \ref{fig:powerenergy}-a).  
-
-
-MISSING CARLOS COMMENTS ON THE POWERLAW FIGURE
 
 \begin{table}[!t]
 \caption{Time (in seconds) for lilgp-multiplexer-6 run on each system depending on the population size. The numbers denote the mean and the standard error of the mean for the 30 runs performed.}
@@ -22,29 +11,36 @@ MISSING CARLOS COMMENTS ON THE POWERLAW FIGURE
 \cline{3-11}
 System 		&~~& 100	&~& 200	&~& 400	&~& 500	&~& 1000\\
 \hline
-Raspberry Pi	&& 7.77 $\pm$ 1.31	&& 19.91 $\pm$ 2.41	&& 46.22 $\pm$ 4.01	&& 61.10 $\pm$ 7.19	&& 116.80 $\pm$ 13.55	\\
-Laptop	&& 1.73 $\pm$ 0.31	&& 4.43 $\pm$ 0.54	&& 10.60 $\pm$ 0.97	&& 13.89 $\pm$ 1.68	&& 27.13 $\pm$ 3.36	\\
-iMac	&& 1.38 $\pm$ 0.28	&& 3.69 $\pm$ 0.48	&& 8.98 $\pm$ 0.84	&& 11.74 $\pm$ 1.44	&& 22.95 $\pm$ 2.85	\\
-Tablet	&& 4.43 $\pm$ 0.75	&& 4.85 $\pm$ 0.78	&& 35.68 $\pm$ 4.15	&& 36.17 $\pm$ 4.17	&& 68.70 $\pm$ 7.89	\\
-Blade	&& 2.59 $\pm$ 0.53	&& 6.88 $\pm$ 0.91	&& 16.78 $\pm$ 1.59	&& 22.28 $\pm$ 2.77	&& 43.53 $\pm$ 5.48	\\
+\raspberry	&& 7.77 $\pm$ 1.31	&& 19.91 $\pm$ 2.41	&& 46.22 $\pm$ 4.01	&& 61.10 $\pm$ 7.19	&& 116.80 $\pm$ 13.55	\\
+\laptop	&& 1.73 $\pm$ 0.31	&& 4.43 $\pm$ 0.54	&& 10.60 $\pm$ 0.97	&& 13.89 $\pm$ 1.68	&& 27.13 $\pm$ 3.36	\\
+\iMac	&& 1.38 $\pm$ 0.28	&& 3.69 $\pm$ 0.48	&& 8.98 $\pm$ 0.84	&& 11.74 $\pm$ 1.44	&& 22.95 $\pm$ 2.85	\\
+\tablet	&& 4.43 $\pm$ 0.75	&& 4.85 $\pm$ 0.78	&& 35.68 $\pm$ 4.15	&& 36.17 $\pm$ 4.17	&& 68.70 $\pm$ 7.89	\\
+\blade	&& 2.59 $\pm$ 0.53	&& 6.88 $\pm$ 0.91	&& 16.78 $\pm$ 1.59	&& 22.28 $\pm$ 2.77	&& 43.53 $\pm$ 5.48	\\
 \hline
 \end{tabular}
 \end{table}
 
 \begin{figure}[!t]
-\subfloat[]{\includegraphics[width=.48\textwidth]{excess_power_log_2.eps}}~~
-\subfloat[]{\includegraphics[width=.48\textwidth]{excess_energy_log_2.eps}}
-\caption{(a) Instantaneous power delivered in each run. (b) Energy consumption per run. In both cases the bars (corresponding to raspberry pi, tablet, laptop, iMac and blade from left to right in each group) indicate mean values and the errorbars span the standard error of the mean. Notice the logarithmic scale in the Y axis.\label{fig:powerenergy}}
+\subfloat[\label{fig:power}]{\includegraphics[width=.48\textwidth]{excess_power_log_2.eps}}~~
+\subfloat[\label{fig:energy}]{\includegraphics[width=.48\textwidth]{excess_energy_log_2.eps}}
+\caption{(a) Instantaneous power delivered in each run. (b) Energy consumption per run. In both cases the bars (corresponding to \raspberrynsp, \tabletnsp, \laptopnsp, \iMac and \blade from left to right in each group) indicate mean values and the errorbars span the standard error of the mean. Notice the logarithmic scale in the Y axis.\label{fig:powerenergy}}
 \end{figure}
 
 
 \begin{figure}[!t]
-\subfloat[]{\hspace{-1.1cm}\includegraphics[width=.585\textwidth]{fitness.eps}}~~
-\subfloat[]{\includegraphics[width=.48\textwidth]{fitnessenergy.eps}}
+\subfloat[\label{fig:fitness}]{\hspace{-1.1cm}\includegraphics[width=.585\textwidth]{fitness.eps}}~~
+\subfloat[\label{fig:powerlaw}]{\includegraphics[width=.48\textwidth]{fitnessenergy.eps}}
 \caption{(a) Distribution of fitness values attained for each population size (platform independent). 
-(b) Tradeoff between fitness attained and energy consumption. The data points mark mean values and the error bars indicate the standard error of the mean. A fit to a power-law $E\propto f^k$ is also included (in the case of the Blade system, we have omitted the last point from the fit since it is clearly an outlier). 
+(b) Tradeoff between fitness attained and energy consumption. The data points mark mean values and the error bars indicate the standard error of the mean. A fit to a power-law $E\propto f^k$ is also included (in the case of the \blade system, we have omitted the last point since it is an outlier). Notice the logarithmic scale in the Y axis.
 \label{fig:fitnessenergy}}
 \end{figure}
+
+As described in the previous section, computational times and power delivered for each of the devices and algorithms tested using different population sizes for each of the experiments are reported in Table~\ref{T:r_obtained} and Figure~\ref{fig:power} respectively.  The first thing that may be noticed is the difference in computing time among devices analyzed, which corresponds with expectations:  small devices (\raspberry and \tabletnsp) require quite a long time to reach solutions and this is typically the reason why they are not frequently used as the hardware platform to run EAs -- although they are useful when non-standard distributed models are analyzed (such as pool-based models, \cite{pool}).
+
+Nevertheless, we are considering a different point of view, and will not just focus on computing time.  Different features can thus be analyzed:  (i) device behavior when considering energy consumed by the algorithm per unit of time; (ii) total energy required to find a solution and (iii) the way population size influences the energy needs when looking for a solution. If we focus firstly on the energy required by lilgp to be run in every device (see Fig. \ref{fig:energy}), we notice that  handheld devices (\raspberry and \tabletnsp) are the least demanding ones, requiring an order of magnitude less energy to run the same algorithm when compared with more standard computers:  \iMacnsp, \laptop and \blade system. Secondly, when considering the total energy required to reach the solution for the problem, the tablet running Android is the device that provides the \emph{cheapest} solution, according to energy consumed, while \blade and \laptop are the more \emph{expensive} ones in every case.  Yet, if we only focus on computing time, then, the opposite is the case, and \iMacnsp, \laptop and \blade would be the preferred ones.  But given that we are looking for energy efficient ways of finding solutions by means of EAs, then \raspberry and \tablet are preferred.
+
+Finally, we can also analyze the influence of population sizes in both the time to reach solutions and the energy required for that.  In the experimental stage, the runs with smaller population sizes typically reach 500 generations -- the maximum allowed, given that they cannot find the solution with that small number of individuals.  Therefore, we will focus on the runs with larger population sizes and the energy consumed to reach those solutions.  We see in Fig. \ref{fig:energy} that there is a general trend of increasing energy cost for increasing population sizes\footnote{@frchavez comment on blade} which has a twofold cause: the longer computational time needed to complete the runs and the slightly larger power delivered in each case. The latter effect can be due to issues related to memory management and is most remarkable in non-handheld devices (quite interestingly, no change is found for \raspberry and quite small changes for the \tablet). This increased energy toll does not always pay off as we can see by inspecting Fig. \ref{fig:fitness} (except for the largest population size, there does not seem to be a significant difference between the median fitness for a certain size and the immediately smaller size). A more focused perspective on this issue is shown in Fig. \ref{fig:powerlaw} in which we depict the energy required by each device to attain a certain fitness. The order of growth of this cost can be modeled as a power law as a first approximation. Such a power law is consistent with the superlinear cost of obtaining increasingly better approximations to the optimal solution and --while the fit can be obviously improved-- it provides the means for a first comparison of these different devices. Thus, we can see how the general trends are not dramatically different for  \raspberrynsp, \tabletnsp, \laptop and \iMac except for the offset of order of magnitude between the two former and the two latter. The \blade system provides a more stable energy profile and can be preferred to \laptop and \iMac if a tight approximation to the optimum is sought. However, the smaller devices remain the best option in terms of energy cost.
+
 
 %We may notice first large differences in energy required to run the GP algorithm, when different hardware devices are employed.  Thus, raspberry pi and tablet devices are the ones requiring smaller ammounts of energy per unit of time (power).  Nevertheless, when we take into account not only power, but also total time to complete an experiment, and given that laptops and blade systems provide better computing capabilities, things could be different.  N
 

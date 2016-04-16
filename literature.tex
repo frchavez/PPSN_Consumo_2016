@@ -1,16 +1,53 @@
 \section{Evolutionary Algorithms and power consumption}
 \label{eas}
 
-Computer science took interest in energy efficience a number of years ago, and a new trending topic was born, \textit{Green Computing} \cite{green-computing}.  Also, researchers and algorithms assumed the \textit{energy-aware} \cite{energy-aware} concept.  Even processor makers offered new processors providing \textit{dynamic frequency scaling}, which adapts power consumption as well as heat dissipation to the need of the processes to be run \cite{scaling}, \cite{dynamic-scaling}, \cite{energy-efficient}.
+Computer science took interest in energy efficiency a number of years
+ago, and a new trending topic was born, \textit{Green Computing}
+\cite{green-computing}.  Also, researchers and algorithms assumed the
+\textit{energy-aware} \cite{energy-aware} concept.  Even processor
+makers offered new processors providing \textit{dynamic frequency
+  scaling}, which adapts power consumption as well as heat dissipation
+to the need of the processes to be run \cite{scaling},
+\cite{dynamic-scaling}, \cite{energy-efficient}. 
 
-On the other hand, EAs has already been applied as optimization algorithms in the context of energy management.  We can thus find optimization problems associated to HVAC (Energy management of heating, ventilating and air-conditioning) AE \cite{HVAC}, \cite{chiller}.  We can also find EAs applied to energy dispatch \cite{dispatch}.  But any of the above referred problems are only tangentially connected to the problem we are interested in:  how to include energy consumption as one of the main features of EAs to be considered when looking for solutions, and its relationship with the main parameters of the algorithm.
+On the other hand, EAs has already been applied as optimization
+algorithms in the context of energy management.  We can thus find
+optimization problems associated to HVAC (Energy management of
+heating, ventilating and air-conditioning) AE \cite{HVAC},
+\cite{chiller}.  We can also find EAs applied to energy dispatch
+\cite{dispatch}.  But any of the above referred problems are only
+tangentially connected to the problem we are interested in:  how to
+include energy consumption as one of the main features of EAs to be
+considered when looking for solutions, and its relationship with the
+main parameters of the algorithm. 
 
-The main concept discussed here is the EA capabilities when adapting to dynamic environment, being power consumption one of the main components to be optimized \cite{ephemeral}. This capability, which could be included as a member of the \textit{self*} features of a given algorithm, including EAs \cite{self}, has already been considered by researchers in other kind of algorithms.  Thus, this adaptive capability is being considered as a must when designing new algorithms and computer architectures \cite{energy-aware}, being a key component in infrastructures of any size, from large data centers to processor architectures for movile devices where battery life must be optimized.  Also in this context, EAs have been employed to design cache hierarchies reducing power consumption and heat dissipation \cite{cache}.
+The main concept discussed here is the EA capabilities when adapting
+to dynamic environment, being power consumption one of the main
+components to be optimized \cite{ephemeral}. This capability, which
+could be included as a member of the \textit{self*} features of a
+given algorithm, including EAs \cite{self}, has already been
+considered by researchers in other kind of algorithms.  Thus, this
+adaptive capability is being considered as a must when designing new
+algorithms and computer architectures \cite{energy-aware}, being a key
+component in infrastructures of any size, from large data centers to
+processor architectures for mobile devices where battery life must be
+optimized.  Also in this context, EAs have been employed to design
+cache hierarchies reducing power consumption and heat dissipation
+\cite{cache}. 
 
 Yet, to the best of our knowledge, EAs have never been studied from the point of view of their own energy needs.  % this sentece appears repeated in this page at the end of introduction and in the literature section... It should be removed from one of these sections -  pedro
-Given their stochastic nature, the number of parameters regulating the way they perform the search process and the plethora of hardware platforms available to run them, we consider it of interest to study the energy consumed when looking for a solution, so that in the future they may become energy-aware and capable of selfregulating when progressing towards the solution of the problem faced.
+Given their stochastic nature, the number of parameters regulating the
+way they perform the search process and the plethora of hardware
+platforms available to run them, we consider it of interest to study
+the energy consumed when looking for a solution, so that in the future
+they may become energy-aware and capable of self-regulating when
+progressing towards the solution of the problem faced. 
 
-%This is part of our first approach to the study of EAs energy consumption.  Although we have already performed a preliminary study with EAs \cite{MAEB}, we try here to analyse a widespread software tool devoted to GP, \textit{lilgp}, so that we can reach wider conclusions.
+%This is part of our first approach to the study of EAs energy
+%consumption.  Although we have already performed a preliminary study
+%with EAs \cite{MAEB}, we try here to analyse a widespread software
+%tool devoted to GP, \textit{lilgp}, so that we can reach wider
+%conclusions. 
 
 %I think that this paragrah can't be included, because the MEAB 2016 is later than PPSN. - Paco Chávez
 

@@ -15,10 +15,12 @@ On the other hand, and given the influence of computing time in the total amount
 the optimal solution is found.  We are thus mainly interested in the average computing time for the 30 runs, together with the energy consumed along that time.  The only differences that may arise are due to hardware differences:  instruction set architecture, processor speed, operating system, etc;  % also the operating system architecture affects  -  pedro
 features that are not in the focus of this work.  Nevertheless, theses differences may influence future decision on the preferred hardware and operating system for the algorithms.  
 
-We must also mention the interest in studying some of the main parameters of the algorithm:  they have a well-known impact on the time to find solutions, and may thus also directly, or indirectly influence the energy consumed to reach that solution.  In this preliminary study we have focused on population size and have tested several values for the problem selected.  Alghouhh we are working with GP and a well-known problem, this first analysis will be helpful to see that energy consumption is an important issue when working with EAs.
+We must also mention the interest in studying some of the main parameters of the algorithm:  they have a well-known impact on the time to find solutions, and may thus also directly, or indirectly influence the energy consumed to reach that solution.  In this preliminary study we have focused on population size and have tested several values for the problem selected.  Although we are working with GP and a well-known problem, this first analysis will be helpful to see that energy consumption is an important issue when working with EAs.
 
 In order to ease the compilation processes in every hardware platform, we have selected a well known implementation of GP in the C programming language:  lilgp \cite{lilgp}.
-%on the one hand a simple GA \cite{michalewicz} with a simple C-implementation \cite{web_algoritmo}, and on the other hand lilgp for GP \cite{lilgp}.  
+%on the one hand a simple GA \cite{michalewicz} with a simple
+%C-implementation \cite{web_algoritmo}, and on the other hand lilgp
+%for GP \cite{lilgp}. 
 Regarding the problem selected for the experimental stage, we have selected one of the test problems provided by lilgp: the multiplexer problem. To be precise, we have set up to work with 6 bits. The main parameters of the algorithm are described in Table~\ref{Table:par_gp}.  Function and terminal sets are the standard ones as described by Koza \cite{koza}.
 
 %with each of the software tools selected:  the multiplexer problem provided with lilgp on the one hand, and an scalar function -check ~\ref{eq:fitness}-  with five variables to be optimized. 
@@ -59,7 +61,7 @@ for measuring energy consumed by each of the algorithms.
 \begin{tabular}{lp{4.5cm}ccp{3cm}} \hline
 Device		&	Processor			&	Cores	&	RAM &	OS		\\ 
 \hline
-\raspberry   	& Cortex-A7 900 Mhz			&	 4 	&	1GB &	Raspbian GNU/Linux 7	\\
+\raspberry   	& Cortex-A7 900 MHz			&	 4 	&	1GB &	Raspbian GNU/Linux 7	\\
 \tablet		& Samsung Galaxy Tab 3 SM-T311, Exynos 4212 1.5 GHz& 2  & 1.5 GB &	Android	4.4.2 (kernel 3.0.31) \\
 \laptop 		& Intel(R) Core(TM) i5-2450M 2.5GHz	&	4	&	8GB &	Ubuntu 12.04.5 LTS \\
 \iMac		& Intel(R) Core(TM) i5 2.7GHz	& 4	& 4GB 	&OSX 10.11.4			\\
@@ -102,7 +104,7 @@ eventual hysteretic phenomena).
 
 \subsubsection*{Blade.}
 
-Ecosystems such as clusters are very used to compute big data sets. This kind of systems allow us to optimize, by sharing, resources like ethernet, storage devices, power supply, etc. %In this work we have studied, for the problem described, if it is possible to optimize the energy consumption. We have used a virtualization ecosystem, where the problem has been executed in a virtual machine. 
+Ecosystems such as clusters are very used to compute big data sets. This kind of systems allow us to optimize, by sharing, resources like Ethernet, storage devices, power supply, etc. %In this work we have studied, for the problem described, if it is possible to optimize the energy consumption. We have used a virtualization ecosystem, where the problem has been executed in a virtual machine. 
 The ecosystem we use employs VMWare Esxi 5.0\footnote{\url{https://www.vmware.com/support/vsphere5/doc/vsphere-esx-vcenter-server-50-release-notes.html}} (see Table \ref{Table:devices}) whose hypervisor provides us with information about energy consumed by both the hardware platform as well as any of the virtual machines running on it.  Thus we can obtain specific data for the virtual machine running the algorithm, and thus we can compute the difference between energy consumption when the algorithm is running and when it is not running.  
 %, where there is a virtual machine with the features described in Table \ref{Table:devices}. The hypervisor system allows us to control both the energy consumed by the Blade and by the virtual machine in question. With these Blade features we can study the power measurements in the different problem configurations.
 

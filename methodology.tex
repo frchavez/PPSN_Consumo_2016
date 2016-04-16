@@ -3,19 +3,45 @@
 
 This preliminary study tries to measure power consumption for 
 %a couple of EAs, Genetic Algorithms (GA) and Genetic Programming (GP). 
-the Genetic Programming (GP) algorithm. In the following subsections both the algorithm setting (\ref{algsetting}) and computational platforms (\ref{compplat}) are presented.
+the Genetic Programming (GP) algorithm. In the following subsections
+both the algorithm setting (\ref{algsetting}) and computational
+platforms (\ref{compplat}) are presented. 
 
 \subsection{Algorithmic Setting}
 \label{algsetting}
 
-Given the stochastic nature of this kind of algorithms, we firstly decided to run each of the experiment 30 times so that the average can be computed as an estimation of the algorithm behavior. In order to establish a fair comparison among the different hardware platforms considered, these runs are done with the same 30 random seeds so that all of the runs are exactly the same in every platform, when considering high level operations defined in the high level programming language.
+Given the stochastic nature of this kind of algorithms, we firstly
+decided to run each of the experiment 30 times so that the average can
+be computed as an estimation of the algorithm behavior. In order to
+establish a fair comparison among the different hardware platforms
+considered, these runs are done with the same 30 random seeds so that
+all of the runs are exactly the same in every platform, when
+considering high level operations defined in the high level
+programming language. 
 
-On the other hand, and given the influence of computing time in the total amount of energy consumed by the algorithm, we configured the main loop of the algorithm to finish when 
+On the other hand, and given the influence of computing time in the
+total amount of energy consumed by the algorithm, we configured the
+main loop of the algorithm to finish when  
 %a required level of solution quality is reached. 
-the optimal solution is found.  We are thus mainly interested in the average computing time for the 30 runs, together with the energy consumed along that time.  The only differences that may arise are due to hardware differences:  instruction set architecture, processor speed, operating system, etc;  % also the operating system architecture affects  -  pedro
-features that are not in the focus of this work.  Nevertheless, theses differences may influence future decision on the preferred hardware and operating system for the algorithms.  
+the optimal solution is found.  We are thus mainly interested in the
+average computing time for the 30 runs, together with the energy
+consumed along that time.  The only differences that may arise are due
+to hardware differences:  instruction set architecture, processor
+speed and operating system;  % also the operating system
+                               % architecture affects  -  pedro 
+features that are not the focus of this work.  Nevertheless, these
+differences may influence future decision on the preferred hardware
+and operating system for the algorithms.
 
-We must also mention the interest in studying some of the main parameters of the algorithm:  they have a well-known impact on the time to find solutions, and may thus also directly, or indirectly influence the energy consumed to reach that solution.  In this preliminary study we have focused on population size and have tested several values for the problem selected.  Although we are working with GP and a well-known problem, this first analysis will be helpful to see that energy consumption is an important issue when working with EAs.
+We must also mention the interest in studying some of the main
+parameters of the algorithm:  they have a well-known impact on the
+time to find solutions, and may thus also directly, or indirectly
+influence the energy consumed to reach that solution.  In this
+preliminary study we have focused on population size and have tested
+several values for the problem selected.  Although we are working with
+GP and a well-known problem, this first analysis will be helpful to
+see that energy consumption is an important issue when working with
+EAs. 
 
 In order to ease the compilation processes in every hardware platform, we have selected a well known implementation of GP in the C programming language:  lilgp \cite{lilgp}.
 %on the one hand a simple GA \cite{michalewicz} with a simple

@@ -1,7 +1,17 @@
 \section{Results}
 \label{results}
-
-
+As described in the previous section, computational times and power
+delivered for each of the devices are reported in
+Table~\ref{T:r_obtained}; algorithms tested using
+different population sizes for each of the experiments are shown in
+Fig.~\ref{fig:power}.  The
+first thing that may be noticed is the difference in computing time
+among devices analyzed, which corresponds with expectations:  small
+devices (\raspberry and \tabletnsp) require quite a long time to reach
+solutions and this is typically the reason why they are not frequently
+used as the hardware platform to run EAs -- although they are useful
+when non-standard distributed models are analyzed (such as pool-based
+models, \cite{pool}). 
 
 \begin{table}[!t]
 \caption{Time (in seconds) for lilgp-multiplexer-6 run on each system depending on the population size. The numbers denote the mean and the standard error of the mean for the 30 runs performed.}
@@ -46,18 +56,6 @@ axis.
 \label{fig:fitnessenergy}}
 \end{figure}
 
-As described in the previous section, computational times and power
-delivered for each of the devices are reported in
-Table~\ref{T:r_obtained}; algorithms tested using
-different population sizes for each of the experiments are shown in
-Fig.~\ref{fig:power}.  The
-first thing that may be noticed is the difference in computing time
-among devices analyzed, which corresponds with expectations:  small
-devices (\raspberry and \tabletnsp) require quite a long time to reach
-solutions and this is typically the reason why they are not frequently
-used as the hardware platform to run EAs -- although they are useful
-when non-standard distributed models are analyzed (such as pool-based
-models, \cite{pool}). 
 
 Nevertheless, we are considering a different point of view, and will
 not just focus on computing time.  Different features can thus be

@@ -33,8 +33,7 @@ System 		&~~& 100	&~& 200	&~& 400	&~& 500	&~& 1000\\
 \begin{figure}[!t]
 \subfloat[\label{fig:power}]{\includegraphics[width=.48\textwidth]{excess_power_log_2.eps}}~~
 \subfloat[\label{fig:energy}]{\includegraphics[width=.48\textwidth]{excess_energy_log_2.eps}}
-\caption{(a) Instantaneous power delivered in each run. (b) Energy
-  consumption per run. In both cases the bars (corresponding to
+\caption{(a) Instantaneous power delivered in each run. (b) Power delivered per run. In both cases the bars (corresponding to
   \raspberrynsp, \tabletnsp, \laptopnsp, \iMac and \blade from left to
   right in each group) indicate mean values and the error bars span
   the standard error of the mean. Notice the logarithmic scale in the
@@ -79,9 +78,9 @@ ways of finding solutions by means of EAs, then \raspberry and \tablet
 might be preferred. Of course, this may look as a somewhat expected
 result a posteriori but it is nevertheless important to have obtained experimental
 confirmation of this fact, since different devices do not necessarily have
-to yield analogous trade-offs between consumption and speed. 
+to yield analogous trade-offs between energy consumption and speed. 
 
-In addition to absolute consumption values, it is also interesting to analyze
+In addition to absolute energy consumption values, it is also interesting to analyze
 how the energy requirements vary for a given device when the parameterization
 is changed. In this case, we have focused on population sizes for two reasons:
 firstly, it is an essential parameter that greatly influences the search process and
@@ -89,7 +88,7 @@ can have an energy impact due to both the different behavior of the algorithm an
 memory management issues that might appear; secondly, its use in conjunction
 with a stopping condition based on generations influences the total work done as
 well as the quality of the solutions attained. This fact is used as a proxy to study
-consumption as a function of the attained quality of solutions in devices in which
+energy consumption as a function of the attained quality of solutions in devices in which
 online energy measurements are not possible (and hence only the total energy 
 consumed in a run can be measured). 
 

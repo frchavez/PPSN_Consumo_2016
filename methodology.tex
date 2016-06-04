@@ -112,7 +112,8 @@ Device		&	Processor			&	Cores	&	RAM &	OS		\\
 
 
 \subsubsection*{Laptop and Raspberry Pi.}
-Regarding the \laptop and \raspberrynsp, we have employed a multimeter for measuring total consumption of the device in two different scenarios:  (i) when the algorithm is 
+Regarding the \laptop and \raspberrynsp, we have employed a multimeter
+for measuring total power delivered to the device in two different scenarios:  (i) when the algorithm is 
 not running and (ii) when the algorithm is running.  Starting with an initial measurement at rest (first scenario) in both cases, our multimeter is able to measure the watts 
 delivered, which remains constant in the case of \raspberrynsp~while the algorithm is running. So we can obtain watts delivered by the algorithm (second scenario) by 
 simply subtracting both values. 
@@ -127,7 +128,7 @@ by subtracting the initial value, we get the power delivered by the algorithm. %
 %Given that \emph{current intensity} values remain constant in every case, we can obtain the measure for the algorithm by simply subtracting both values for a given device.  This value together with electric tension allows us to compute watts consumed.
 
 \subsubsection*{Tablet.}
-In order to collect data about energy consumption on Android devices, such as smartphones or tablets, \emph{PowerTutor}\footnote{\url{http://ziyang.eecs.umich.edu/projects/powertutor/documentation.html}} \cite{powertutor2} has been used. 
+In order to collect data about power delivered to Android devices, such as smartphones or tablets, \emph{PowerTutor}\footnote{\url{http://ziyang.eecs.umich.edu/projects/powertutor/documentation.html}} \cite{powertutor2} has been used. 
 % http://ziyang.eecs.umich.edu/projects/powertutor/documentation.html
 This app is a diagnostic tool for analyzing system and app energy consumption.
 In order to obtain power measurements of the EA, PowerTutor runs in the background and logs data on power utilization for each app, summarizing the info in an intuitive user interface (reporting the number of Joules the app has consumed during the run).

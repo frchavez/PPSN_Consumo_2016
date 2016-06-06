@@ -118,7 +118,7 @@ not running and (ii) when the algorithm is running.  Starting with an initial me
 delivered, which remains constant in the case of \raspberrynsp~while the algorithm is running. So we can obtain watts delivered by the algorithm (second scenario) by 
 simply subtracting both values. 
 In the \laptop the watts delivered vary continuously, so we record a video in order to register all possible values and how long it lasted each one. Once all data are 
-collected, we analyze how long each value stays with respect to the total execution time. Thus, we can estimate more accurately the average power delivered and, finally 
+collected, we analyze how long each value stays with respect to the total execution time. Thus, we can accurately compute the average power delivered and, finally 
 by subtracting the initial value, we get the power delivered by the algorithm. %Taking into account the number of sampling and the total execution time, the sampling frequency for each population size ($100$, $200$, $400$, $500$ and $1000$) is $1Hz$, $0.90Hz$, $0.68Hz$, $0.7Hz$ and $0.65Hz$, respectively.
 
 %In the \laptop the watts delivered vary continuously, so we record a video in order to register all possible values and how long it lasted each one. In order to take accuracy 
@@ -128,10 +128,10 @@ by subtracting the initial value, we get the power delivered by the algorithm. %
 %Given that \emph{current intensity} values remain constant in every case, we can obtain the measure for the algorithm by simply subtracting both values for a given device.  This value together with electric tension allows us to compute watts consumed.
 
 \subsubsection*{Tablet.}
-In order to collect data about power delivered to Android devices, such as smartphones or tablets, \emph{PowerTutor}\footnote{\url{http://ziyang.eecs.umich.edu/projects/powertutor/documentation.html}} \cite{powertutor2} has been used. 
+In order to collect data about energy consumption to Android devices, such as smartphones or tablets, \emph{PowerTutor}\footnote{\url{http://ziyang.eecs.umich.edu/projects/powertutor/documentation.html}} \cite{powertutor2} has been used. 
 % http://ziyang.eecs.umich.edu/projects/powertutor/documentation.html
 This app is a diagnostic tool for analyzing system and app energy consumption.
-In order to obtain power measurements of the EA, PowerTutor runs in the background and logs data on power utilization for each app, summarizing the info in an intuitive user interface (reporting the number of Joules the app has consumed during the run).
+In order to obtain energy measurements of the EA, PowerTutor runs in the background and logs data on energy utilization for each app, summarizing the info in an intuitive user interface (reporting the number of Joules the app has consumed during the run).
 
 
 \subsubsection*{iMac.}
@@ -145,7 +145,7 @@ under OS control.
 To gauge the data,
 the same data-collection process is run for 100s before each batch of runs, thus providing
 an indication of the system basal consumption at that moment which is in turn used to 
-compute the excess power consumption due to the EA (and hence accounting for
+compute the excess power delivered due to the EA (and hence accounting for
 eventual hysteretic phenomena).
 
 \subsubsection*{Blade.}
